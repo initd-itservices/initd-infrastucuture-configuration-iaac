@@ -152,10 +152,10 @@ NAME     STATUS   ROLES                  AGE     VERSION
 control1   Ready    control-plane,master   3m21s   v1.22.0
 ```
 
-##### Addition
+### Addition
 
-[1. Install Rancher](/cluster/Rancher.md)
-[2. Install Container Registry](/registry/Registry.md)
+##### 1. [Install Rancher](/cluster/Rancher.md)
+##### 2. [Install Container Registry](/registry/Registry.md)
 
 After this step you can now perfrom additional steps such as configuring different users with defined roles this step can be done at your own discretion and you can now run you deployments as services.
 
