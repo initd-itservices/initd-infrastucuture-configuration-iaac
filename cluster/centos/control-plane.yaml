@@ -17,7 +17,7 @@
       file:
         path: $HOME/.kube
         state: directory
-        mode: 0600
+        mode: 0755
 
     - name: copy admin.conf to user's kube config
       copy:
@@ -25,11 +25,6 @@
         dest: $HOME/.kube/config
         remote_src: yes
 
-    - name: Install git
-      package:
-        name: git
-        state: latest
-      become: yes
 
     - name: Install Helm in Control plane
       shell: curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 && chmod 700 get_helm.sh && ./get_helm.sh
@@ -41,6 +36,13 @@
         name: nginx
         state: latest
       become: yes
+
+    - name: Install git
+      package:
+        name: git
+        state: latest
+      become: yes
+
 
     - name: Taint All Nodes
       shell: kubectl taint nodes --all node-role.kubernetes.io/master-
