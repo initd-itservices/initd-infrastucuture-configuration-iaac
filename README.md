@@ -4,7 +4,7 @@
 
 This is project will help you setup kubernetes out of the box with help of a configuration tool called [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html). This is an open source contribution by DeveloperPrince
 
-![DeveloperPrince](logo.png)
+![DeveloperPrince](logo.png) ![Intid-Logo](INITD_Logo.jpg)
 
 NB: Please take note it is usually recommended to make user of stable release of kubernetes however we shall make use kubernetes 1.22.0 instead of the latest release.
 
