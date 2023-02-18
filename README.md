@@ -2,7 +2,7 @@
 
 ![Kubernetes](kubernetes-logo.jpg)
 
-This project will help you setup kubernetes out of the box with help of a configuration tool called [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html). This is an open source contribution by DeveloperPrince
+This project will help you setup kubernetes out of the box with help of a configuration tool called [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html). This is an open source contribution by DeveloperPrince as DevOps Consultant in Initd
 
 ![DeveloperPrince](logo.png) ![Intid-Logo](INITD_Logo.jpg)
 
