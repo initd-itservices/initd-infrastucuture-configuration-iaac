@@ -115,7 +115,7 @@
        enabled: yes
        state: started
 
-- hosts: master
+- hosts: control_plane
   become: yes
   tasks:
    - name: install kubectl
