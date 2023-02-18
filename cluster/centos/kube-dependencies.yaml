@@ -54,7 +54,7 @@
      package:
        name: docker-ce
        state: latest
-       nobest: true
+       allowerasing: true
      become: yes
 
    - name: Start Docker service
