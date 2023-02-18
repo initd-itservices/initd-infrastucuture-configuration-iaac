@@ -4,7 +4,7 @@
       - username: "admin"
       - password: "admin"
       - user: "admin"
-      - domain: "registry.domain.com"
+      - hostname: "registry.domain.com"
   tasks:
     - name: Add Docker repo
     get_url:
@@ -176,7 +176,7 @@
                   }
               }
           server {
-              server_name  {{domain}};
+              server_name  {{hostname}};
               location / {
                   proxy_pass        http://localhost:5000/;
 

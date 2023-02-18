@@ -1,0 +1,26 @@
+---
+- hosts: control_plane
+  become: yes
+  vars:
+    - email: "me@example.org"
+    - hostname: "rancher.hostname.com"
+  tasks:
+    - name: Add stable chart repo
+      kubernetes.core.helm_repository:
+        name: rancher_stable
+        repo_url: "https://releases.rancher.com/server-charts/stable"
+
+    - name: Create a namespace for Rancher
+      shell: kubectl create namespace cattle-system
+
+    - name: Install Rancher using letsencrypt
+      kubernetes.core.helm:
+        name: rancher_stable
+        chart_ref: stable/rancher
+        release_namespace: rancher
+        values:
+          ingress:
+            tls:
+              source: "letsEncrypt"
+          hostname: "{{hostname}}"
+          etsEncrypt.email: "{{email}}"
